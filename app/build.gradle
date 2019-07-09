@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.app.amber.chat"
+        minSdkVersion 16
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode 4
+        versionName "4.0"
+        useLibrary 'org.apache.http.legacy'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5.1'
+    implementation('org.apache.httpcomponents:httpmime:4.3') {
+        exclude module: "httpclient"
+    }
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:7.2.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-offline-v7:0.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.myhexaville:smart-image-picker:1.0.4'
+    implementation 'com.evernote:android-job:1.2.6'
+    implementation 'android.arch.persistence.room:runtime:1.1.1';
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.rygelouv:android-audio-sensei:0.1.2'
+    implementation 'com.github.mklimek:ssl-utils-android:1.0.1'
+    implementation 'com.yarolegovich:lovely-dialog:1.1.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1';
+
+    configurations.all { exclude group: 'com.android.support', module: 'support-v13' }
+
+    //implementation 'fi.vtt.nubomedia:webrtcpeer-android:1.1.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+apply plugin: 'com.google.gms.google-services'

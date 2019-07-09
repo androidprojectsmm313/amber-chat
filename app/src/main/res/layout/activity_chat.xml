@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".chat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view_chat"
+        android:layout_above="@+id/user_input">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chat_item"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_marginTop="10dp"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="true"
+            ></ListView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="10"
+        android:id="@+id/user_input"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Message"
+            android:background="@drawable/chat_edt"
+            android:id="@+id/message"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:maxHeight="60dp"
+            android:scrollbars="vertical"
+            android:layout_weight="8" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/send"
+            android:src="@drawable/ic_send_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/capture_pic"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/record"
+            android:src="@drawable/ic_mic_none_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            />
+    </LinearLayout>
+    <!--
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="10dp"
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_colorNormal="#DA4336"
+        fab:menu_colorPressed="#E75043"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_openDirection="up"
+        fab:menu_backgroundColor="@android:color/transparent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/share_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_location_black_24dp"
+            fab:fab_size="mini"
+            fab:fab_label="" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/share_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attach_file_black_24dp"
+            fab:fab_size="mini"
+            fab:fab_label="" />
+
+    </com.github.clans.fab.FloatingActionMenu>-->
+
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="@android:color/background_light"
+        android:indeterminateTint="@android:color/holo_red_dark"
+        android:layout_marginTop="-7dp"/>
+
+</RelativeLayout>

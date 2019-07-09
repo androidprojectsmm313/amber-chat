@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1083683071398",
+    "firebase_url": "https://chat-12ef2.firebaseio.com",
+    "project_id": "chat-12ef2",
+    "storage_bucket": "chat-12ef2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083683071398:android:b5585967ca156917",
+        "android_client_info": {
+          "package_name": "com.app.amber.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083683071398-0ga5cth3eu1n624s3nl887b7bhob7cfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.amber.chat",
+            "certificate_hash": "128c48afac0fc043b5b50c82454984574e1e92ca"
+          }
+        },
+        {
+          "client_id": "1083683071398-pe061jivim295rfu02ooj10s4j08g7t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgPBIphmkHTMUulEFQaJjGMJ0stOHvijw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083683071398-pe061jivim295rfu02ooj10s4j08g7t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

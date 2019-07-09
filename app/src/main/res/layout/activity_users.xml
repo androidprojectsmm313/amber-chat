@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".users">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/search"
+            android:hint="Search"
+            android:padding="5dp"
+            android:background="@drawable/chat_edt"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_item"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:layout_above="@+id/panel"
+        ></ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No User Found"
+        android:layout_centerInParent="true"
+        android:id="@+id/error_msg"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:id="@+id/panel"
+        android:background="#eff2f7"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_weight="10"
+            android:text="Contacts"
+            android:id="@+id/contacts"
+            android:background="@drawable/border_right"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.001"
+            android:background="#000000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:padding="0dp"
+            android:text="Groups"
+            android:id="@+id/group"
+            android:background="@drawable/border_right"
+            /></LinearLayout>
+</RelativeLayout>
